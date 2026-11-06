@@ -56,7 +56,7 @@ On MNIST, 200 hand-designed neurons beat 1,000 random ones. On real photos, rand
 ## 2. How it works
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph E["EXPLORE rounds (3-8)"]
         A["LLM writes feature files<br/>conv2d / relu / abs / pool / dense<br/>every weight typed as a number"] --> B["Harness runs each neuron on<br/>5,000 labelled TRAINING images"]
         B --> C["Telemetry back to LLM:<br/>per-class mean, std, % active,<br/>top-50 label histogram,<br/>neuron-neuron overlap"]
